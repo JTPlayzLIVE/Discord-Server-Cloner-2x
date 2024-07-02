@@ -2,7 +2,7 @@ import gradient from "gradient-string";
 import backup from "../src/index";
 import boxen from "boxen";
 import { rl, translations } from "../index";
-import chalk from "chalk"; 
+import chalk from "chalk";
 import { Client } from "discord.js-selfbot-v13";
 export function choiceinit(client: Client) {
   let clearall = () => {
@@ -24,7 +24,12 @@ export function choiceinit(client: Client) {
         case "3":
           creatorname();
           await client.guilds.fetch();
-          const option = choice === "1" ? "Clonerop2choice" : choice === "2" ? "Clonerop1choice" : "Clonerop3choice";
+          const option =
+            choice === "1"
+              ? "Clonerop2choice"
+              : choice === "2"
+                ? "Clonerop1choice"
+                : "Clonerop3choice";
           configop(client, option);
           break;
         case "6":
@@ -34,9 +39,7 @@ export function choiceinit(client: Client) {
         case "7":
           creatorname();
           console.log(
-            gradient(["red", "purple"])(
-              "Link: https://discord.gg/infinite-community-1014921352500756500"
-            )
+            gradient(["red", "purple"])("Link: https://discord.gg/MGxaUJcj49"),
           );
           awaitenter(client);
           break;
@@ -51,7 +54,7 @@ export function choiceinit(client: Client) {
         default:
           clearall();
       }
-    }
+    },
   );
 }
 
@@ -68,46 +71,66 @@ export function creatorname() {
   console.clear();
   console.log(
     gradient(["#ff4500", "#ffa500", "#ff6347"])(`
-      ▄▄▄██▀▀▀▒█████   ▄▄▄       ▒█████   ██ ▄█▀ ██▀███   ██▓  ██████ ▄▄▄█████▓ ▄▄▄       ███▄    █  ██▓
-      ▒██  ▒██▒  ██▒▒████▄    ▒██▒  ██▒ ██▄█▒ ▓██ ▒ ██▒▓██▒▒██    ▒ ▓  ██▒ ▓▒▒████▄     ██ ▀█   █ ▓██▒
-      ░██  ▒██░  ██▒▒██  ▀█▄  ▒██░  ██▒▓███▄░ ▓██ ░▄█ ▒▒██▒░ ▓██▄   ▒ ▓██░ ▒░▒██  ▀█▄  ▓██  ▀█ ██▒▒██▒
-   ▓██▄██▓ ▒██   ██░░██▄▄▄▄██ ▒██   ██░▓██ █▄ ▒██▀▀█▄  ░██░  ▒   ██▒░ ▓██▓ ░ ░██▄▄▄▄██ ▓██▒  ▐▌██▒░██░
-    ▓███▒  ░ ████▓▒░ ▓█   ▓██▒░ ████▓▒░▒██▒ █▄░██▓ ▒██▒░██░▒██████▒▒  ▒██▒ ░  ▓█   ▓██▒▒██░   ▓██░░██░
-    ▒▓▒▒░  ░ ▒░▒░▒░  ▒▒   ▓▒█░░ ▒░▒░▒░ ▒ ▒▒ ▓▒░ ▒▓ ░▒▓░░▓  ▒ ▒▓▒ ▒ ░  ▒ ░░    ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░▓
-    ▒ ░▒░    ░ ▒ ▒░   ▒   ▒▒ ░  ░ ▒ ▒░ ░ ░▒ ▒░  ░▒ ░ ▒░ ▒ ░░ ░▒  ░ ░    ░      ▒   ▒▒ ░░ ░░   ░ ▒░ ▒ ░
-    ░ ░ ░  ░ ░   ▒    ░   ▒   ░ ░ ░   ░ ░░ ░    ░░   ░  ▒ ░░  ░  ░            ░   ▒      ░   ░ ░    ░ 
-    `)
+    ██╗████████╗██████╗ ██╗      █████╗ ██╗   ██╗███████╗    ██████╗ ██████╗  ██████╗ ██████╗ ██╗   ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+    ██║╚══██╔══╝██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝╚══███╔╝    ██╔══██╗██╔══██╗██╔═══██╗██╔══██╗██║   ██║██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+    ██║   ██║   ██████╔╝██║     ███████║ ╚████╔╝   ███╔╝     ██████╔╝██████╔╝██║   ██║██║  ██║██║   ██║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+██   ██║   ██║   ██╔═══╝ ██║     ██╔══██║  ╚██╔╝   ███╔╝      ██╔═══╝ ██╔══██╗██║   ██║██║  ██║██║   ██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+╚█████╔╝   ██║   ██║     ███████╗██║  ██║   ██║   ███████╗    ██║     ██║  ██║╚██████╔╝██████╔╝╚██████╔╝╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+╚════╝    ╚═╝   ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝  ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+`),
   );
-
-
+  console.log("Discord Server Cloner by JTPlayz Productions");
 }
 
 export function menutext(client: Client) {
   creatorname();
-  const goodbyegudog = langat !== "en" ? gradient(["#2180db", "#75a1cb", "#78a5d3"])(["[0] Nos despedimos do Gudog com carinho, Adeus gudog\n","[0] Em homenagem ao gudog, Descanse em paz\n","[0] Em memória do Gudog, um administrador que nos deixou. Adeus, amigo\n"][Math.floor(Math.random() * 3)]) : null;
-  console.log((goodbyegudog ? goodbyegudog : '') + gradient(["#ff4500", "#ffa500", "#ff6347"])(t("menuText")));
+  const goodbyegudog =
+    langat !== "en"
+      ? gradient(["#2180db", "#75a1cb", "#78a5d3"])(
+          [
+            "[0] Nos despedimos do Gudog com carinho, Adeus gudog\n",
+            "[0] Em homenagem ao gudog, Descanse em paz\n",
+            "[0] Em memória do Gudog, um administrador que nos deixou. Adeus, amigo\n",
+          ][Math.floor(Math.random() * 3)],
+        )
+      : null;
+  console.log(
+    (goodbyegudog ? goodbyegudog : "") +
+      gradient(["#ff4500", "#ffa500", "#ff6347"])(t("menuText")),
+  );
   choiceinit(client);
 }
-
 
 export function infouser(client: Client) {
   creatorname();
 
   console.log(
     gradient(["#ff4500", "#ffa500", "#ff6347"])(
-      t(`Nome da conta: ${client.user.username}\nNome global da conta: ${client.user.globalName
-      }\nAvatar ${client.user.avatarURL({
-        format: "png",
-        dynamic: true,
-        size: 1024,
-      })}\nBanner: ${client.user.bannerURL({
-        format: "png",
-        dynamic: true,
-      })}\nID: ${client.user.id}\nData de criação da conta: ${client.user.createdAt
-      }\nGuildas: ${client.guilds.cache.size} \nNitro?: ${client.user.nitroType
-      }\nEmail: ${client.user.emailAddress}\nCelular: ${client.user.phoneNumber
-      }\nIdioma: ${client.settings.locale}\nTema: ${client.settings.theme}\nModo desenvolvedor: ${client.settings.developerMode}\nAfk Timeout: ${client.settings.afkTimeout}\nDM Scan Level: ${client.settings.DMScanLevel}\nModo compacto: ${client.settings.compactMode}\nPreview Link: ${client.settings.previewLink}`)
-    )
+      t(
+        `Nome da conta: ${client.user.username}\nNome global da conta: ${
+          client.user.globalName
+        }\nAvatar ${client.user.avatarURL({
+          format: "png",
+          dynamic: true,
+          size: 1024,
+        })}\nBanner: ${client.user.bannerURL({
+          format: "png",
+          dynamic: true,
+        })}\nID: ${client.user.id}\nData de criação da conta: ${
+          client.user.createdAt
+        }\nGuildas: ${client.guilds.cache.size} \nNitro?: ${
+          client.user.nitroType
+        }\nEmail: ${client.user.emailAddress}\nCelular: ${
+          client.user.phoneNumber
+        }\nIdioma: ${client.settings.locale}\nTema: ${
+          client.settings.theme
+        }\nModo desenvolvedor: ${client.settings.developerMode}\nAfk Timeout: ${
+          client.settings.afkTimeout
+        }\nDM Scan Level: ${client.settings.DMScanLevel}\nModo compacto: ${
+          client.settings.compactMode
+        }\nPreview Link: ${client.settings.previewLink}`,
+      ),
+    ),
   );
   awaitenter(client);
 }
@@ -121,10 +144,10 @@ export async function Cloner(
     doNotBackup: string[];
   },
   cloneOption: number,
-  createNewServer?: boolean
+  createNewServer?: boolean,
 ) {
   let guildId1: string;
-  let GUILD_ID: string = '';
+  let GUILD_ID: string = "";
   const starttime = process.hrtime();
   let errors = 0;
   let clonedall = 0;
@@ -140,9 +163,7 @@ export async function Cloner(
       await client.guilds.fetch();
       const guild = client.guilds.cache.get(guildId1);
       if (!guild) {
-        console.error(gradient(["red", "darkred"])(
-          t('idservererror')
-        ));
+        console.error(gradient(["red", "darkred"])(t("idservererror")));
         setTimeout(() => {
           clearall();
         }, 20000);
@@ -157,15 +178,18 @@ export async function Cloner(
           return;
         }*/
         const newGuild = await client.guilds.create(
-          'Infinite Community Cloner',
+          "JTPlayz Productions Cloner",
           {
-            icon:
-              'https://cdn.discordapp.com/attachments/1014927587954393098/1145100637281992784/infinite_logo.png',
-          }
+            icon: "https://cdn.discordapp.com/icons/825739135608029184/d84e03ad2d7d00abbfc1be2ef74e8398.webp?size=240",
+          },
         );
 
         if (!newGuild) {
-          console.error(gradient(["red", "darkred"])('Aconteceu um erro fatal na criação do servidor, o clonador será reiniciado em 10 segundos'));
+          console.error(
+            gradient(["red", "darkred"])(
+              "Aconteceu um erro fatal na criação do servidor, o clonador será reiniciado em 10 segundos",
+            ),
+          );
           errors++;
           setTimeout(() => {
             clearall();
@@ -183,7 +207,11 @@ export async function Cloner(
       });
 
       if (!cloner) {
-        console.error(gradient(["red", "darkred"])('Aconteceu um erro fatal na clonagem e o clonador será reiniciado em 10 segundos'));
+        console.error(
+          gradient(["red", "darkred"])(
+            "Aconteceu um erro fatal na clonagem e o clonador será reiniciado em 10 segundos",
+          ),
+        );
         errors++;
         setTimeout(() => {
           clearall();
@@ -194,15 +222,14 @@ export async function Cloner(
       const newGuild = client.guilds.cache.get(GUILD_ID);
 
       if (!newGuild) {
-        console.error(gradient(["red", "darkred"])(t('invalidid')
-        ));
+        console.error(gradient(["red", "darkred"])(t("invalidid")));
         errors++;
         rl.close();
         return;
       }
 
       const startime2 = process.hrtime();
-      console.log(gradient(["darkblue", "blue"])(t('initcloner')));
+      console.log(gradient(["darkblue", "blue"])(t("initcloner")));
       let channelCount = 0;
 
       cloner.channels.categories.forEach((category: { children: any[] }) => {
@@ -224,17 +251,37 @@ export async function Cloner(
         const exetimess = endtime2[0] + endtime2[1] / 1e9;
         const Tempo2 = Tempoex(exetimess);
 
-        console.log(gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(t('msgfinalcloner') + Tempo2));
-        console.log(gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(t('configtime') + Tempo));
-        console.log(gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(t('channelnumber') + clonedall));
-        console.log(gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(t('errorcloning') + errors));
+        console.log(
+          gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(
+            t("msgfinalcloner") + Tempo2,
+          ),
+        );
+        console.log(
+          gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(
+            t("configtime") + Tempo,
+          ),
+        );
+        console.log(
+          gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(
+            t("channelnumber") + clonedall,
+          ),
+        );
+        console.log(
+          gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(
+            t("errorcloning") + errors,
+          ),
+        );
 
         if (cloneOption === 3) {
           const template = await newGuild.createTemplate(
             `${guild.name}`,
-            `By Infinite community (https://discord.gg/infinite-community-1014921352500756500)`
+            `By JTPlayz Productions (https://discord.gg/MGxaUJcj49)`,
           );
-          console.log(gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(`» Template Url: ${template.url}`));
+          console.log(
+            gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(
+              `» Template Url: ${template.url}`,
+            ),
+          );
         }
 
         awaitenter(client);
@@ -254,25 +301,30 @@ export async function Cloner(
       const exetimes = endtime[0] + endtime[1] / 1e9;
       const Tempo = Tempoex(exetimes);
     } catch (error) {
-      console.error('Ocorreu um erro específico durante a clonagem: ', error);
+      console.error("Ocorreu um erro específico durante a clonagem: ", error);
       errors++;
       rl.close();
     }
-    
   };
 
-  rl.question(gradient(["#5bb409", "#6ed60e", "#e8fad8"])(t('ServerID')), async (guildId: string) => {
-    guildId1 = guildId;
+  rl.question(
+    gradient(["#5bb409", "#6ed60e", "#e8fad8"])(t("ServerID")),
+    async (guildId: string) => {
+      guildId1 = guildId;
 
-    if (!createNewServer) {
-      rl.question(gradient(["#5bb409", "#6ed60e", "#e8fad8"])(t('ServerID2')), (destinationId: string) => {
-        GUILD_ID = destinationId;
+      if (!createNewServer) {
+        rl.question(
+          gradient(["#5bb409", "#6ed60e", "#e8fad8"])(t("ServerID2")),
+          (destinationId: string) => {
+            GUILD_ID = destinationId;
+            proceedWithCloning();
+          },
+        );
+      } else {
         proceedWithCloning();
-      });
-    } else {
-      proceedWithCloning();
-    }
-  });
+      }
+    },
+  );
 }
 export async function serverinfo(client: Client) {
   async function fetchGuildData(guildId: string) {
@@ -282,87 +334,87 @@ export async function serverinfo(client: Client) {
       creatorname();
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Nome do servidor: ${preview.name}`
-        )
+          `Nome do servidor: ${preview.name}`,
+        ),
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Descrição do servidor: ${preview.description}`
-        )
+          `Descrição do servidor: ${preview.description}`,
+        ),
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Número de Membros: ${preview.approximateMemberCount}`
-        )
+          `Número de Membros: ${preview.approximateMemberCount}`,
+        ),
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Número de Canais: ${preview.approximatePresenceCount}`
-        )
+          `Número de Canais: ${preview.approximatePresenceCount}`,
+        ),
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Criado em: ${preview.createdAt}`
-        )
+          `Criado em: ${preview.createdAt}`,
+        ),
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `ID do servidor: ${preview.id}`
-        )
+          `ID do servidor: ${preview.id}`,
+        ),
       );
 
       if (preview.icon) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Ícone do servidor: ${preview.iconURL()}`
-          )
+            `Ícone do servidor: ${preview.iconURL()}`,
+          ),
         );
       }
 
       if (preview.splash) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Splash do servidor: ${preview.splashURL()}`
-          )
+            `Splash do servidor: ${preview.splashURL()}`,
+          ),
         );
       }
 
       if (preview.discoverySplash) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Discovery Splash do servidor: ${preview.discoverySplashURL()}`
-          )
+            `Discovery Splash do servidor: ${preview.discoverySplashURL()}`,
+          ),
         );
       }
 
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Recursos do servidor: ${preview.features.join(", ")}`
-        )
+          `Recursos do servidor: ${preview.features.join(", ")}`,
+        ),
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Emojis do servidor: ${preview.emojis.size}`
-        )
+          `Emojis do servidor: ${preview.emojis.size}`,
+        ),
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Stickers do servidor: ${preview.stickers.size}`
-        )
+          `Stickers do servidor: ${preview.stickers.size}`,
+        ),
       );
     } catch (error) {
       console.error(
         gradient(["#ff4500", "#ffa500", "#ff6347"])("Aconteceu um erro:"),
-        error
+        error,
       );
     }
     awaitenter(client);
   }
   rl.question(
-    gradient(["purple", "pink"])(t('ServerID')),
+    gradient(["purple", "pink"])(t("ServerID")),
     (guildId: string) => {
       fetchGuildData(guildId);
-    }
+    },
   );
 }
 export const configOptions2: any = {
@@ -378,9 +430,7 @@ export const configOptions: any = {
 
 export async function configop(client: Client, functionName: string) {
   creatorname();
-  console.log(
-    gradient(["purple", "pink"])(t('configcloner'))
-  );
+  console.log(gradient(["purple", "pink"])(t("configcloner")));
 
   let clearall = () => {
     console.clear();
@@ -391,24 +441,26 @@ export async function configop(client: Client, functionName: string) {
 
   while (true) {
     const tableContent = `
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(
-      t("msgcloner")
-    )}
+    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t("msgcloner"))}
     ${chalk.red("V:")} ${chalk.blue(configOptions.maxMessagesPerChannel)}
     ${chalk.red("O:")} ${gradient(["purple", "pink"])(t("savejsonconfig"))}
-    ${chalk.red("V:")} ${configOptions.jsonSave ? chalk.green(t("yes")) : chalk.red(t("no"))
-      }
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t('beautifuljson'))}
-    ${chalk.red("V:")} ${configOptions.jsonBeautify ? chalk.green(t("yes")) : chalk.red(t("no"))
-      }
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t('noclone'))}
+    ${chalk.red("V:")} ${
+      configOptions.jsonSave ? chalk.green(t("yes")) : chalk.red(t("no"))
+    }
+    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t("beautifuljson"))}
+    ${chalk.red("V:")} ${
+      configOptions.jsonBeautify ? chalk.green(t("yes")) : chalk.red(t("no"))
+    }
+    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t("noclone"))}
     ${chalk.red("V:")} ${chalk.yellow(configOptions.doNotBackup.join(", "))}
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t('ignoretickets'))}
-    ${chalk.red("V:")} ${configOptions2.ignoreTickets ? chalk.green(t("yes")) : chalk.red(t("no"))
-      }
+    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t("ignoretickets"))}
+    ${chalk.red("V:")} ${
+      configOptions2.ignoreTickets ? chalk.green(t("yes")) : chalk.red(t("no"))
+    }
     ${chalk.red("O:")} ${gradient(["purple", "pink"])("Debug?")}
-    ${chalk.red("V:")} ${configOptions2.Debug ? chalk.green(t("yes")) : chalk.red(t("no"))
-      }
+    ${chalk.red("V:")} ${
+      configOptions2.Debug ? chalk.green(t("yes")) : chalk.red(t("no"))
+    }
     `;
     const tableWithBorders = boxen(tableContent, {
       borderStyle: {
@@ -432,44 +484,30 @@ export async function configop(client: Client, functionName: string) {
     console.log(tableWithBorders);
 
     try {
-      const choice = await espop(
-        gradient(["purple", "pink"])(
-          t('option234')
-        )
-      );
+      const choice = await espop(gradient(["purple", "pink"])(t("option234")));
 
       if (choice === "1") {
         configOptions.maxMessagesPerChannel = parseInt(
-          await espop(
-            gradient(["purple", "pink"])(t('cloningmessage'))),10);
+          await espop(gradient(["purple", "pink"])(t("cloningmessage"))),
+          10,
+        );
         configOptions.jsonSave = await yop(
-          gradient(["purple", "pink"])(
-            t("savejsoninput")
-          )
+          gradient(["purple", "pink"])(t("savejsoninput")),
         );
         configOptions.jsonBeautify = await yop(
-          gradient(["purple", "pink"])(t("beautifuljson")
-          )
+          gradient(["purple", "pink"])(t("beautifuljson")),
         );
         configOptions.doNotBackup = (
-          await espop(
-            gradient(["purple", "pink"])(
-              t("noclonerinput")
-            )
-          )
+          await espop(gradient(["purple", "pink"])(t("noclonerinput")))
         )
           .split(",")
           .map((item) => item.trim());
         const ticketop = await yop(
-          gradient(["purple", "pink"])(
-            t("ignoreticketsinput")
-          )
+          gradient(["purple", "pink"])(t("ignoreticketsinput")),
         );
 
         const Debugop = await yop(
-          gradient(["purple", "pink"])(
-            t("debugoption")
-          )
+          gradient(["purple", "pink"])(t("debugoption")),
         );
 
         if (Debugop) {
@@ -523,23 +561,20 @@ export async function configop(client: Client, functionName: string) {
       } else if (choice === "3") {
         clearall();
       } else {
-        console.log(gradient(["red", "darkred"])(t('undefinedfunc')));
+        console.log(gradient(["red", "darkred"])(t("undefinedfunc")));
       }
     } catch (error) {
-      console.error(
-        gradient(["red", "darkred"])(
-          t('error2'),
-          error
-        )
-      );
+      console.error(gradient(["red", "darkred"])(t("error2"), error));
       awaitenter(client);
     }
   }
 }
 
-
 async function yop(question: string): Promise<boolean> {
-  const answer = await espop(question + gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])((t('yandn'))));
+  const answer = await espop(
+    question +
+      gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(t("yandn")),
+  );
   return answer === "1";
 }
 
@@ -567,13 +602,10 @@ function Tempoex(timeInSeconds: number) {
   }
 }
 function awaitenter(client: Client) {
-  rl.question(
-    gradient(["purple", "pink"])(t('awaitenter')),
-    () => {
-      menutext(client);
-      choiceinit(client);
-    }
-  );
+  rl.question(gradient(["purple", "pink"])(t("awaitenter")), () => {
+    menutext(client);
+    choiceinit(client);
+  });
 }
 function changelang(client: Client) {
   if (langat === "pt") {
